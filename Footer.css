@@ -1,0 +1,82 @@
+.site-footer {
+  margin-top: 4rem;
+  background: linear-gradient(180deg, transparent, rgba(0, 229, 255, 0.04));
+  border-top: 1px solid var(--border);
+  padding: 3rem 0 1.25rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.footer-brand p {
+  color: var(--text-dim);
+  font-size: 0.92rem;
+  max-width: 320px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-en);
+  font-weight: 900;
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+  color: var(--primary);
+}
+.footer-logo svg {
+  font-size: 1.6rem;
+  padding: 0.5rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-2));
+  color: #0a0e1a;
+  box-shadow: 0 0 16px rgba(0, 229, 255, 0.35);
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+.footer-col h4 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+.footer-col a {
+  color: var(--text-dim);
+  font-size: 0.92rem;
+  transition: all var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.footer-col a:hover {
+  color: var(--primary);
+  transform: translateX(-3px);
+}
+
+.footer-contact svg { color: var(--primary); }
+
+.footer-bottom {
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .footer-brand { grid-column: 1 / -1; }
+}
+@media (max-width: 480px) {
+  .footer-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,13 @@
+/* Games page uses same .games-grid from Home.css but keep this for page-specific tweaks */
+.games-toolbar {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.games-toolbar .search-box { flex: 1; min-width: 240px; }
+.games-toolbar .filter-tabs { flex-wrap: wrap; }
+@media (max-width: 700px) {
+  .games-toolbar .filter-tabs { width: 100%; justify-content: center; }
+}

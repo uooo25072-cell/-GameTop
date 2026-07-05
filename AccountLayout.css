@@ -1,0 +1,52 @@
+.account-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.account-sidebar {
+  position: sticky;
+  top: calc(var(--header-h) + 1rem);
+  padding: 1.25rem;
+}
+
+.account-sidebar-title {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--primary);
+}
+
+.account-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.account-nav-link {
+  padding: 0.7rem 0.9rem;
+  border-radius: 10px;
+  font-weight: 600;
+  color: var(--text-dim);
+  transition: all var(--transition);
+}
+.account-nav-link:hover {
+  color: var(--text);
+  background: rgba(0, 229, 255, 0.08);
+}
+.account-nav-link.active {
+  color: var(--primary);
+  background: rgba(0, 229, 255, 0.12);
+  box-shadow: inset 3px 0 0 var(--primary);
+}
+
+.account-content {
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .account-layout { grid-template-columns: 1fr; }
+  .account-sidebar { position: static; }
+}
